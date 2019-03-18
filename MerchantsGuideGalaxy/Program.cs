@@ -7,11 +7,11 @@ namespace MerchantsGuideGalaxy
     {
         static void Main(string[] args)
         {
-            Console.Write("Digite os valores a serem convertidos. Digite \"sair\" para fechar.");
-            Console.WriteLine();
+            
 
             while (true)
             {
+                Console.WriteLine("Olá, Digite os valores. Digite \"sair\" para fechar.");
                 var valor = Console.ReadLine();
 
                 if (valor == "sair")

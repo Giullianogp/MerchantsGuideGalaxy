@@ -1,20 +1,19 @@
-﻿using MerchantsGuideGalaxy.Utils;
+﻿using MerchantsGuideGalaxy.Classes;
+using MerchantsGuideGalaxy.Enum;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MerchantsGuideGalaxy.Services
 {
-    public static class LanguageService
+    public class LanguageService
     {
-        private const string ERROR = "I have no idea what you are talking about";
-
-        public static string Processar(string valor)
+        public string Processar(string valor)
         {
-            if (!valor.IsRomanValid())
-            {
-                return ERROR;
-            }
+            var simbolos = InterpretadorService.IdentificarComando(valor);
 
-            return valor.RomanToInt().ToString();
+            
         }
 
+        
     }
 }
